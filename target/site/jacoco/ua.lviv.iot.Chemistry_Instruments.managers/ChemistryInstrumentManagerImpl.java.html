@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChemistryInstrumentManagerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Chemistry Instruments</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.Chemistry_Instruments.managers</a> &gt; <span class="el_source">ChemistryInstrumentManagerImpl.java</span></div><h1>ChemistryInstrumentManagerImpl.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.Chemistry_Instruments.managers;
+
+import ua.lviv.iot.Chemistry_Instruments.models.ChemistryInstrument;
+import ua.lviv.iot.Chemistry_Instruments.models.TypeOfInstruments;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+<span class="nc" id="L12">public class ChemistryInstrumentManagerImpl implements</span>
+        ChemistryInstrumentManager {
+
+<span class="nc" id="L15">    private List&lt;ChemistryInstrument&gt;</span>
+            chemistryInstrumentList = new ArrayList&lt;&gt;();
+
+    public final void setChemistryInstrumentList(
+            final List&lt;ChemistryInstrument&gt; chemistryInstrumentListObj) {
+<span class="nc" id="L20">        this.chemistryInstrumentList = chemistryInstrumentListObj;</span>
+<span class="nc" id="L21">    }</span>
+
+    @Override
+    public final List&lt;ChemistryInstrument&gt; sortByYear(
+            final List&lt;ChemistryInstrument&gt;
+                    chemistryInstrumentListObj, final boolean reverse) {
+
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (reverse) {</span>
+<span class="nc" id="L29">            Collections.sort(chemistryInstrumentListObj,</span>
+<span class="nc" id="L30">                    Comparator.comparing(</span>
+<span class="nc" id="L31">                            ChemistryInstrument::getYearOfRelease).reversed());</span>
+        } else {
+
+<span class="nc" id="L34">            Collections.sort(chemistryInstrumentListObj,</span>
+<span class="nc" id="L35">                    Comparator.comparing(</span>
+                            ChemistryInstrument::getYearOfRelease));
+        }
+
+<span class="nc" id="L39">        return chemistryInstrumentListObj;</span>
+
+    }
+
+    @Override
+    public final List&lt;ChemistryInstrument&gt; sortByType(
+            final List&lt;ChemistryInstrument&gt;
+                    chemistryInstrumentListObj, final boolean reverse) {
+
+
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        if (reverse) {</span>
+
+<span class="nc" id="L51">            Collections.sort(chemistryInstrumentListObj,</span>
+<span class="nc" id="L52">                    Comparator.comparing(</span>
+<span class="nc" id="L53">                        ChemistryInstrument::getTypeOfInstruments).reversed());</span>
+        } else {
+
+<span class="nc" id="L56">            Collections.sort(chemistryInstrumentListObj,</span>
+<span class="nc" id="L57">                    Comparator.comparing(</span>
+                            ChemistryInstrument::getTypeOfInstruments));
+
+        }
+<span class="nc" id="L61">        return chemistryInstrumentListObj;</span>
+    }
+
+    @Override
+    public final List&lt;ChemistryInstrument&gt; findByType(final TypeOfInstruments
+                                                      typeOfInstruments) {
+<span class="nc" id="L67">    return chemistryInstrumentList.stream().filter(chemistryInstrument -&gt;</span>
+<span class="nc" id="L68">        chemistryInstrument.getTypeOfInstruments().equals(typeOfInstruments))</span>
+<span class="nc" id="L69">            .collect(Collectors.toList());</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
