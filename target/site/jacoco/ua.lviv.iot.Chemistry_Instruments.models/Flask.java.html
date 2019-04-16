@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Flask.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Chemistry Instruments</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.Chemistry_Instruments.models</a> &gt; <span class="el_source">Flask.java</span></div><h1>Flask.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.Chemistry_Instruments.models;
+
+public class Flask extends ChemistryInstrument {
+
+    private String name;
+    private int height;
+    private int radius;
+
+<span class="fc" id="L9">    public Flask() {</span>
+
+<span class="fc" id="L11">    }</span>
+
+    public Flask(final String nameObj,
+<span class="nc" id="L14">                 final int heightObj, final int radiusObj) {</span>
+<span class="nc" id="L15">        this.name = nameObj;</span>
+<span class="nc" id="L16">        this.height = heightObj;</span>
+<span class="nc" id="L17">        this.radius = radiusObj;</span>
+
+
+<span class="nc" id="L20">    }</span>
+
+    public final String getName() {
+<span class="nc" id="L23">        return name;</span>
+    }
+
+    public final void setName(final String nameObj) {
+<span class="nc" id="L27">        this.name = nameObj;</span>
+<span class="nc" id="L28">    }</span>
+
+    public final int getHeight() {
+<span class="nc" id="L31">        return height;</span>
+    }
+
+    public final void setHeight(final int heightObj) {
+<span class="nc" id="L35">        this.height = heightObj;</span>
+<span class="nc" id="L36">    }</span>
+
+    public final int getRadius() {
+<span class="nc" id="L39">        return radius;</span>
+    }
+
+    public final void setRadius(final int radiusObj) {
+<span class="nc" id="L43">        this.radius = radiusObj;</span>
+<span class="nc" id="L44">    }</span>
+
+
+    @Override
+    public final String toString() {
+<span class="nc" id="L49">        return &quot;Flask{&quot;</span>
+                + &quot;name='&quot;
+                + name
+                + '\''
+                + &quot;, height=&quot;
+                + height
+                + &quot;, radius=&quot;
+                + radius
+                + '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

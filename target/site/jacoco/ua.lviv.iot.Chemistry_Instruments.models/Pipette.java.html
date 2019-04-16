@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pipette.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Chemistry Instruments</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.Chemistry_Instruments.models</a> &gt; <span class="el_source">Pipette.java</span></div><h1>Pipette.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.Chemistry_Instruments.models;
+
+public class Pipette extends ChemistryInstrument {
+
+    private int volume;
+    private TypeOfPipette typeOfPipette;
+
+<span class="fc" id="L8">    public Pipette() {</span>
+
+<span class="fc" id="L10">    }</span>
+
+<span class="nc" id="L12">    public Pipette(final int volumeObj, final TypeOfPipette typeOfPipetteObj) {</span>
+<span class="nc" id="L13">        this.volume = volumeObj;</span>
+<span class="nc" id="L14">        this.typeOfPipette = typeOfPipetteObj;</span>
+
+<span class="nc" id="L16">    }</span>
+
+    public final int getVolume() {
+<span class="nc" id="L19">        return volume;</span>
+    }
+
+    public final void setVolume(final int volumeObj) {
+<span class="nc" id="L23">        this.volume = volumeObj;</span>
+<span class="nc" id="L24">    }</span>
+
+    public final TypeOfPipette getTypeOfPipette() {
+<span class="nc" id="L27">        return typeOfPipette;</span>
+    }
+
+    public final void setTypeOfPipette(final TypeOfPipette typeOfPipetteObj) {
+<span class="nc" id="L31">        this.typeOfPipette = typeOfPipetteObj;</span>
+<span class="nc" id="L32">    }</span>
+
+    @Override
+    public final String toString() {
+<span class="nc" id="L36">        return &quot;Pipette{&quot;</span>
+                + &quot;volume=&quot;
+                + volume
+                + &quot;, typeOfPipette=&quot;
+                + typeOfPipette
+                + '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
