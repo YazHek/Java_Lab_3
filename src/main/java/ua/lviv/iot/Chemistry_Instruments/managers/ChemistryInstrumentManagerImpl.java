@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ChemistryInstrumentManagerImpl implements
+
         ChemistryInstrumentManager {
 
     private List<ChemistryInstrument>
@@ -62,12 +63,50 @@ public class ChemistryInstrumentManagerImpl implements
     }
 
     @Override
-    public final List<ChemistryInstrument> findByType(final TypeOfInstruments
-                                                      typeOfInstruments) {
-    return chemistryInstrumentList.stream().filter(chemistryInstrument ->
-        chemistryInstrument.getTypeOfInstruments().equals(typeOfInstruments))
-            .collect(Collectors.toList());
+    public final List<ChemistryInstrument>
+    findByType(final List<ChemistryInstrument> chemistryInstrumentList,
+                                final TypeOfInstruments typeOfInstruments) {
+        return chemistryInstrumentList.stream().filter(chemistryInstrument ->
+                chemistryInstrument.getTypeOfInstruments()
+                        .equals(typeOfInstruments))
+                .collect(Collectors.toList());
     }
 
+
+    public static void main(final String[] args) {
+
+        ChemistryInstrumentManager manager = new ChemistryInstrumentManagerImpl();
+
+        ChemistryInstrument flask = new ChemistryInstrument("Abra",
+                "Cadabra", 2001, TypeOfInstruments.ACIDS);
+
+        ChemistryInstrument pipette = new ChemistryInstrument("Eniki",
+                "Beniki", 2010, TypeOfInstruments.BASIS);
+
+        ChemistryInstrument tripod = new ChemistryInstrument("Company",
+                "Model", 2019, TypeOfInstruments.OXIDS);
+
+
+
+        List<ChemistryInstrument> chemistryInstrumentList = new ArrayList<>();
+
+        chemistryInstrumentList.add(flask);
+        chemistryInstrumentList.add(pipette);
+        chemistryInstrumentList.add(tripod);
+
+
+        ((ChemistryInstrumentManagerImpl) manager).setChemistryInstrumentList(
+                chemistryInstrumentList);
+
+
+        System.out.println(manager.findByType(chemistryInstrumentList,
+                TypeOfInstruments.BASIS));
+        System.out.println(manager.sortByType(chemistryInstrumentList,
+                true));
+        System.out.println(manager.sortByYear(chemistryInstrumentList,
+                false));
+
+
+    }
 
 }

@@ -11,5 +11,8 @@ public interface ChemistryInstrumentManager {
             List<ChemistryInstrument> chemistryInstrumentList, boolean reverse);
     List<ChemistryInstrument> sortByType(
             List<ChemistryInstrument> chemistryInstrumentList, boolean reverse);
-    List<ChemistryInstrument> findByType(TypeOfInstruments typeOfInstruments);
+
+    List<ChemistryInstrument> findByType(List<ChemistryInstrument>
+                                                 chemistryInstrumentList,
+                                         TypeOfInstruments typeOfInstruments);
 }
