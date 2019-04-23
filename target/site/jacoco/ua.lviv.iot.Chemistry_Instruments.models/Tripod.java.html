@@ -10,41 +10,45 @@ public class Tripod extends ChemistryInstrument {
 
 <span class="fc" id="L11">    }</span>
 
-    public Tripod(final int heightObj,
-<span class="nc" id="L14">                  final int diametrObj, final int lenghtObj) {</span>
-<span class="nc" id="L15">        this.height = heightObj;</span>
-<span class="nc" id="L16">        this.diametr = diametrObj;</span>
-<span class="nc" id="L17">        this.lenght = lenghtObj;</span>
+    public Tripod(final String brandObj, final String modelObj,
+                  final int yearOfReleaseObj,
+                  final TypeOfInstruments typeOfInstrumentsObj,
+                  final int heightObj,
+                  final int diametrObj, final int lenghtObj) {
+<span class="fc" id="L18">        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);</span>
+<span class="fc" id="L19">        this.height = heightObj;</span>
+<span class="fc" id="L20">        this.diametr = diametrObj;</span>
+<span class="fc" id="L21">        this.lenght = lenghtObj;</span>
 
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L23">    }</span>
 
     public final int getHeight() {
-<span class="nc" id="L22">        return height;</span>
+<span class="nc" id="L26">        return height;</span>
     }
 
     public final void setHeight(final int heightObj) {
-<span class="nc" id="L26">        this.height = heightObj;</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L30">        this.height = heightObj;</span>
+<span class="nc" id="L31">    }</span>
 
     public final int getDiametr() {
-<span class="nc" id="L30">        return diametr;</span>
+<span class="nc" id="L34">        return diametr;</span>
     }
 
     public final void setDiametr(final int diametrObj) {
-<span class="nc" id="L34">        this.diametr = diametrObj;</span>
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L38">        this.diametr = diametrObj;</span>
+<span class="nc" id="L39">    }</span>
 
     public final int getLenght() {
-<span class="nc" id="L38">        return lenght;</span>
+<span class="nc" id="L42">        return lenght;</span>
     }
 
     public final void setLenght(final int lenghtObj) {
-<span class="nc" id="L42">        this.lenght = lenghtObj;</span>
-<span class="nc" id="L43">    }</span>
+<span class="nc" id="L46">        this.lenght = lenghtObj;</span>
+<span class="nc" id="L47">    }</span>
 
     @Override
     public final String toString() {
-<span class="nc" id="L47">        return &quot;Tripod{&quot;</span>
+<span class="nc" id="L51">        return &quot;Tripod{&quot;</span>
                 + &quot;height=&quot;
                 + height
                 + &quot;, diametr=&quot;
@@ -52,6 +56,25 @@ public class Tripod extends ChemistryInstrument {
                 + &quot;, lenght=&quot;
                 + lenght
                 + '}';
+    }
+
+
+    public String getHeaders() {
+<span class="fc" id="L63">        return super.getHeaders()</span>
+                + &quot;height&quot;
+                + &quot;,&quot;
+                + &quot;diametr&quot;
+                + &quot;,&quot;
+                + &quot;lenght&quot;;
+    }
+
+    public String toCSV() {
+<span class="fc" id="L72">        return super.toCSV()</span>
+                + height
+                + &quot;,&quot;
+                + diametr
+                + &quot;,&quot;
+                + lenght;
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

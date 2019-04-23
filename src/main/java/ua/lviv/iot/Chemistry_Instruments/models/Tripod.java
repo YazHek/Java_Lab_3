@@ -10,8 +10,12 @@ public class Tripod extends ChemistryInstrument {
 
     }
 
-    public Tripod(final int heightObj,
+    public Tripod(final String brandObj, final String modelObj,
+                  final int yearOfReleaseObj,
+                  final TypeOfInstruments typeOfInstrumentsObj,
+                  final int heightObj,
                   final int diametrObj, final int lenghtObj) {
+        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);
         this.height = heightObj;
         this.diametr = diametrObj;
         this.lenght = lenghtObj;
@@ -52,5 +56,24 @@ public class Tripod extends ChemistryInstrument {
                 + ", lenght="
                 + lenght
                 + '}';
+    }
+
+
+    public String getHeaders() {
+        return super.getHeaders()
+                + "height"
+                + ","
+                + "diametr"
+                + ","
+                + "lenght";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + height
+                + ","
+                + diametr
+                + ","
+                + lenght;
     }
 }

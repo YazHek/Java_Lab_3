@@ -72,4 +72,20 @@ public class ChemistryInstrument {
                 + typeOfInstruments
                 + '}';
     }
+
+    public  String getHeaders(){
+
+       return "brand" + ","
+               + "model" + ","
+               + "yearOfRelease" + ","
+               + "typeOfInstruments";
+    }
+
+    public String toCSV(){
+
+       return brand + ","
+               + model + ","
+               + yearOfRelease + ","
+               + typeOfInstruments;
+    }
 }

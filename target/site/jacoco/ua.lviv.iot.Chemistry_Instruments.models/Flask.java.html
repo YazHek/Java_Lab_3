@@ -10,43 +10,47 @@ public class Flask extends ChemistryInstrument {
 
 <span class="fc" id="L11">    }</span>
 
-    public Flask(final String nameObj,
-<span class="nc" id="L14">                 final int heightObj, final int radiusObj) {</span>
-<span class="nc" id="L15">        this.name = nameObj;</span>
-<span class="nc" id="L16">        this.height = heightObj;</span>
-<span class="nc" id="L17">        this.radius = radiusObj;</span>
+    public Flask(final String brandObj, final String modelObj,
+                 final int yearOfReleaseObj,
+                 final TypeOfInstruments typeOfInstrumentsObj,
+                 final String nameObj,
+                 final int heightObj, final int radiusObj) {
+<span class="fc" id="L18">        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);</span>
+<span class="fc" id="L19">        this.name = nameObj;</span>
+<span class="fc" id="L20">        this.height = heightObj;</span>
+<span class="fc" id="L21">        this.radius = radiusObj;</span>
 
 
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L24">    }</span>
 
     public final String getName() {
-<span class="nc" id="L23">        return name;</span>
+<span class="nc" id="L27">        return name;</span>
     }
 
     public final void setName(final String nameObj) {
-<span class="nc" id="L27">        this.name = nameObj;</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L31">        this.name = nameObj;</span>
+<span class="nc" id="L32">    }</span>
 
     public final int getHeight() {
-<span class="nc" id="L31">        return height;</span>
+<span class="nc" id="L35">        return height;</span>
     }
 
     public final void setHeight(final int heightObj) {
-<span class="nc" id="L35">        this.height = heightObj;</span>
-<span class="nc" id="L36">    }</span>
+<span class="nc" id="L39">        this.height = heightObj;</span>
+<span class="nc" id="L40">    }</span>
 
     public final int getRadius() {
-<span class="nc" id="L39">        return radius;</span>
+<span class="nc" id="L43">        return radius;</span>
     }
 
     public final void setRadius(final int radiusObj) {
-<span class="nc" id="L43">        this.radius = radiusObj;</span>
-<span class="nc" id="L44">    }</span>
+<span class="nc" id="L47">        this.radius = radiusObj;</span>
+<span class="nc" id="L48">    }</span>
 
 
     @Override
     public final String toString() {
-<span class="nc" id="L49">        return &quot;Flask{&quot;</span>
+<span class="nc" id="L53">        return &quot;Flask{&quot;</span>
                 + &quot;name='&quot;
                 + name
                 + '\''
@@ -55,6 +59,26 @@ public class Flask extends ChemistryInstrument {
                 + &quot;, radius=&quot;
                 + radius
                 + '}';
+    }
+
+    public String getHeaders(){
+
+<span class="fc" id="L66">        return super.getHeaders()</span>
+                + &quot;name&quot;
+                + &quot;,&quot;
+                + &quot;height&quot;
+                + &quot;,&quot;
+                + &quot;radius&quot;;
+    }
+
+    public String toCSV(){
+
+<span class="fc" id="L76">        return super.toCSV()</span>
+                + name
+                + &quot;,&quot;
+                + height
+                + &quot;,&quot;
+                + radius;
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

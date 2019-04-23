@@ -10,8 +10,12 @@ public class Flask extends ChemistryInstrument {
 
     }
 
-    public Flask(final String nameObj,
+    public Flask(final String brandObj, final String modelObj,
+                 final int yearOfReleaseObj,
+                 final TypeOfInstruments typeOfInstrumentsObj,
+                 final String nameObj,
                  final int heightObj, final int radiusObj) {
+        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);
         this.name = nameObj;
         this.height = heightObj;
         this.radius = radiusObj;
@@ -55,5 +59,25 @@ public class Flask extends ChemistryInstrument {
                 + ", radius="
                 + radius
                 + '}';
+    }
+
+    public String getHeaders(){
+
+        return super.getHeaders()
+                + "name"
+                + ","
+                + "height"
+                + ","
+                + "radius";
+    }
+
+    public String toCSV(){
+
+        return super.toCSV()
+                + name
+                + ","
+                + height
+                + ","
+                + radius;
     }
 }

@@ -9,36 +9,55 @@ public class Pipette extends ChemistryInstrument {
 
 <span class="fc" id="L10">    }</span>
 
-<span class="nc" id="L12">    public Pipette(final int volumeObj, final TypeOfPipette typeOfPipetteObj) {</span>
-<span class="nc" id="L13">        this.volume = volumeObj;</span>
-<span class="nc" id="L14">        this.typeOfPipette = typeOfPipetteObj;</span>
+    public Pipette(final String brandObj, final String modelObj,
+                   final int yearOfReleaseObj,
+                   final TypeOfInstruments typeOfInstrumentsObj,
+                   final int volumeObj, final TypeOfPipette typeOfPipetteObj) {
+<span class="fc" id="L16">        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);</span>
+<span class="fc" id="L17">        this.volume = volumeObj;</span>
+<span class="fc" id="L18">        this.typeOfPipette = typeOfPipetteObj;</span>
 
-<span class="nc" id="L16">    }</span>
+<span class="fc" id="L20">    }</span>
 
     public final int getVolume() {
-<span class="nc" id="L19">        return volume;</span>
+<span class="nc" id="L23">        return volume;</span>
     }
 
     public final void setVolume(final int volumeObj) {
-<span class="nc" id="L23">        this.volume = volumeObj;</span>
-<span class="nc" id="L24">    }</span>
+<span class="nc" id="L27">        this.volume = volumeObj;</span>
+<span class="nc" id="L28">    }</span>
 
     public final TypeOfPipette getTypeOfPipette() {
-<span class="nc" id="L27">        return typeOfPipette;</span>
+<span class="nc" id="L31">        return typeOfPipette;</span>
     }
 
     public final void setTypeOfPipette(final TypeOfPipette typeOfPipetteObj) {
-<span class="nc" id="L31">        this.typeOfPipette = typeOfPipetteObj;</span>
-<span class="nc" id="L32">    }</span>
+<span class="nc" id="L35">        this.typeOfPipette = typeOfPipetteObj;</span>
+<span class="nc" id="L36">    }</span>
 
     @Override
     public final String toString() {
-<span class="nc" id="L36">        return &quot;Pipette{&quot;</span>
+<span class="nc" id="L40">        return &quot;Pipette{&quot;</span>
                 + &quot;volume=&quot;
                 + volume
                 + &quot;, typeOfPipette=&quot;
                 + typeOfPipette
                 + '}';
+    }
+
+    public String getHeaders(){
+
+<span class="fc" id="L50">        return super.getHeaders()</span>
+                + &quot;volume&quot;
+                + &quot;,&quot;
+                + &quot;typeOfPipette&quot;;
+    }
+
+    public String toCSV() {
+<span class="fc" id="L57">        return super.toCSV()</span>
+                + volume
+                + &quot;,&quot;
+                + typeOfPipette;
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

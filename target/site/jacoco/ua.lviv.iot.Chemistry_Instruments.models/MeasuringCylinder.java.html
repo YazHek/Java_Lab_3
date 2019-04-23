@@ -10,41 +10,45 @@ public class MeasuringCylinder extends ChemistryInstrument {
 
 <span class="nc" id="L11">    }</span>
 
-    public MeasuringCylinder(final int heightObj,
-<span class="nc" id="L14">                             final int volumeObj, final int radiusObj) {</span>
-<span class="nc" id="L15">        this.height = heightObj;</span>
-<span class="nc" id="L16">        this.volume = volumeObj;</span>
-<span class="nc" id="L17">        this.radius = radiusObj;</span>
+    public MeasuringCylinder(final String brandObj, final String modelObj,
+                             final int yearOfReleaseObj,
+                             final TypeOfInstruments typeOfInstrumentsObj,
+                             final int heightObj,
+                             final int volumeObj, final int radiusObj) {
+<span class="fc" id="L18">        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);</span>
+<span class="fc" id="L19">        this.height = heightObj;</span>
+<span class="fc" id="L20">        this.volume = volumeObj;</span>
+<span class="fc" id="L21">        this.radius = radiusObj;</span>
 
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L23">    }</span>
 
     public final int getHeight() {
-<span class="nc" id="L22">        return height;</span>
+<span class="nc" id="L26">        return height;</span>
     }
 
     public final void setHeight(final int heightObj) {
-<span class="nc" id="L26">        this.height = heightObj;</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L30">        this.height = heightObj;</span>
+<span class="nc" id="L31">    }</span>
 
     public final int getVolume() {
-<span class="nc" id="L30">        return volume;</span>
+<span class="nc" id="L34">        return volume;</span>
     }
 
     public final void setVolume(final int volumeObj) {
-<span class="nc" id="L34">        this.volume = volumeObj;</span>
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L38">        this.volume = volumeObj;</span>
+<span class="nc" id="L39">    }</span>
 
     public final int getRadius() {
-<span class="nc" id="L38">        return radius;</span>
+<span class="nc" id="L42">        return radius;</span>
     }
 
     public final void setRadius(final int radiusObj) {
-<span class="nc" id="L42">        this.radius = radiusObj;</span>
-<span class="nc" id="L43">    }</span>
+<span class="nc" id="L46">        this.radius = radiusObj;</span>
+<span class="nc" id="L47">    }</span>
 
     @Override
     public final String toString() {
-<span class="nc" id="L47">        return &quot;MeasuringCylinder{&quot;</span>
+<span class="nc" id="L51">        return &quot;MeasuringCylinder{&quot;</span>
                 + &quot;height=&quot;
                 + height
                 + &quot;, volume=&quot;
@@ -52,6 +56,26 @@ public class MeasuringCylinder extends ChemistryInstrument {
                 + &quot;, radius=&quot;
                 + radius
                 + '}';
+    }
+
+    public String getHeaders(){
+
+<span class="fc" id="L63">        return super.getHeaders()</span>
+                + &quot;height&quot;
+                + &quot;,&quot;
+                + &quot;volume&quot;
+                + &quot;,&quot;
+                + radius;
+    }
+
+    public String toCSV(){
+
+<span class="fc" id="L73">        return super.toCSV()</span>
+                + height
+                + &quot;,&quot;
+                + volume
+                + &quot;,&quot;
+                + radius;
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

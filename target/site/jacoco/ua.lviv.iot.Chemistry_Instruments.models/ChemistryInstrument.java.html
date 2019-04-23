@@ -16,12 +16,12 @@ public class ChemistryInstrument {
 
     public ChemistryInstrument(final String brandObj, final String modelObj,
                                final int yearOfReleaseObj,
-<span class="nc" id="L19">                               final TypeOfInstruments typeOfInstrumentsObj) {</span>
-<span class="nc" id="L20">        this.brand = brandObj;</span>
-<span class="nc" id="L21">        this.model = modelObj;</span>
-<span class="nc" id="L22">        this.yearOfRelease = yearOfReleaseObj;</span>
-<span class="nc" id="L23">        this.typeOfInstruments = typeOfInstrumentsObj;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L19">                               final TypeOfInstruments typeOfInstrumentsObj) {</span>
+<span class="fc" id="L20">        this.brand = brandObj;</span>
+<span class="fc" id="L21">        this.model = modelObj;</span>
+<span class="fc" id="L22">        this.yearOfRelease = yearOfReleaseObj;</span>
+<span class="fc" id="L23">        this.typeOfInstruments = typeOfInstrumentsObj;</span>
+<span class="fc" id="L24">    }</span>
 
 
     public final String getBrand() {
@@ -71,6 +71,22 @@ public class ChemistryInstrument {
                 + &quot;, typeOfInstruments=&quot;
                 + typeOfInstruments
                 + '}';
+    }
+
+    public  String getHeaders(){
+
+<span class="fc" id="L78">       return &quot;brand&quot; + &quot;,&quot;</span>
+               + &quot;model&quot; + &quot;,&quot;
+               + &quot;yearOfRelease&quot; + &quot;,&quot;
+               + &quot;typeOfInstruments&quot;;
+    }
+
+    public String toCSV(){
+
+<span class="fc" id="L86">       return brand + &quot;,&quot;</span>
+               + model + &quot;,&quot;
+               + yearOfRelease + &quot;,&quot;
+               + typeOfInstruments;
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

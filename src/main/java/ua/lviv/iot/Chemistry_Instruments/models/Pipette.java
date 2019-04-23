@@ -9,7 +9,11 @@ public class Pipette extends ChemistryInstrument {
 
     }
 
-    public Pipette(final int volumeObj, final TypeOfPipette typeOfPipetteObj) {
+    public Pipette(final String brandObj, final String modelObj,
+                   final int yearOfReleaseObj,
+                   final TypeOfInstruments typeOfInstrumentsObj,
+                   final int volumeObj, final TypeOfPipette typeOfPipetteObj) {
+        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);
         this.volume = volumeObj;
         this.typeOfPipette = typeOfPipetteObj;
 
@@ -39,5 +43,20 @@ public class Pipette extends ChemistryInstrument {
                 + ", typeOfPipette="
                 + typeOfPipette
                 + '}';
+    }
+
+    public String getHeaders(){
+
+        return super.getHeaders()
+                + "volume"
+                + ","
+                + "typeOfPipette";
+    }
+
+    public String toCSV() {
+        return super.toCSV()
+                + volume
+                + ","
+                + typeOfPipette;
     }
 }

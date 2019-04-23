@@ -10,8 +10,12 @@ public class MeasuringCylinder extends ChemistryInstrument {
 
     }
 
-    public MeasuringCylinder(final int heightObj,
+    public MeasuringCylinder(final String brandObj, final String modelObj,
+                             final int yearOfReleaseObj,
+                             final TypeOfInstruments typeOfInstrumentsObj,
+                             final int heightObj,
                              final int volumeObj, final int radiusObj) {
+        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);
         this.height = heightObj;
         this.volume = volumeObj;
         this.radius = radiusObj;
@@ -52,5 +56,25 @@ public class MeasuringCylinder extends ChemistryInstrument {
                 + ", radius="
                 + radius
                 + '}';
+    }
+
+    public String getHeaders(){
+
+        return super.getHeaders()
+                + "height"
+                + ","
+                + "volume"
+                + ","
+                + radius;
+    }
+
+    public String toCSV(){
+
+        return super.toCSV()
+                + height
+                + ","
+                + volume
+                + ","
+                + radius;
     }
 }

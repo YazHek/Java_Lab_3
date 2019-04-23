@@ -36,7 +36,7 @@ class ChemistryInstrumentManagerImplTest {
                 chemistryInstrumentList,  false));
 
         chemistryInstrumentsTest.clear();
-        
+
         chemistryInstrumentsTest.add(pipette);
         chemistryInstrumentsTest.add(tripod);
         chemistryInstrumentsTest.add(flask);
@@ -108,4 +108,5 @@ class ChemistryInstrumentManagerImplTest {
 
 
     }
+
 }
