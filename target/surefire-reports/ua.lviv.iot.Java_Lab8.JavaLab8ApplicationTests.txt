@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ua.lviv.iot.Java_Lab8.JavaLab8ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.767 s - in ua.lviv.iot.Java_Lab8.JavaLab8ApplicationTests

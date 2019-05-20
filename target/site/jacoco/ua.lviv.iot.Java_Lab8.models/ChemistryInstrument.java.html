@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChemistryInstrument.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java_Lab8</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.Java_Lab8.models</a> &gt; <span class="el_source">ChemistryInstrument.java</span></div><h1>ChemistryInstrument.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.Java_Lab8.models;
+
+import javax.persistence.*;
+
+@Entity
+public class ChemistryInstrument {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private String brand;
+    private String model;
+    private int yearOfRelease;
+
+    public final Integer getId() {
+<span class="fc" id="L17">        return id;</span>
+    }
+
+    public final void setId(Integer id) {
+<span class="nc" id="L21">        this.id = id;</span>
+<span class="nc" id="L22">    }</span>
+
+    @Enumerated(EnumType.STRING)
+    private TypeOfInstruments typeOfInstruments;
+
+
+
+<span class="fc" id="L29">   public ChemistryInstrument() {</span>
+
+<span class="fc" id="L31">    }</span>
+
+
+    public ChemistryInstrument(final String brandObj, final String modelObj,
+                               final int yearOfReleaseObj,
+<span class="fc" id="L36">                               final TypeOfInstruments typeOfInstrumentsObj) {</span>
+<span class="fc" id="L37">        this.brand = brandObj;</span>
+<span class="fc" id="L38">        this.model = modelObj;</span>
+<span class="fc" id="L39">        this.yearOfRelease = yearOfReleaseObj;</span>
+<span class="fc" id="L40">        this.typeOfInstruments = typeOfInstrumentsObj;</span>
+<span class="fc" id="L41">    }</span>
+
+
+    public final String getBrand() {
+<span class="nc" id="L45">        return brand;</span>
+    }
+
+    public final void setBrand(final String brandObj) {
+<span class="nc" id="L49">        this.brand = brandObj;</span>
+<span class="nc" id="L50">    }</span>
+
+    public final String getModel() {
+<span class="nc" id="L53">        return model;</span>
+    }
+
+    public final void setModel(final String modelObj) {
+<span class="nc" id="L57">        this.model = modelObj;</span>
+<span class="nc" id="L58">    }</span>
+
+    public final int getYearOfRelease() {
+<span class="nc" id="L61">        return yearOfRelease;</span>
+    }
+
+    public final void setYearOfRelease(final int yearOfReleaseObj) {
+<span class="nc" id="L65">        this.yearOfRelease = yearOfReleaseObj;</span>
+<span class="nc" id="L66">    }</span>
+
+    public final TypeOfInstruments getTypeOfInstruments() {
+<span class="nc" id="L69">        return typeOfInstruments;</span>
+    }
+
+    public final void setTypeOfInstruments(final TypeOfInstruments
+                                                   typeOfInstrumentsObj) {
+<span class="nc" id="L74">        this.typeOfInstruments = typeOfInstrumentsObj;</span>
+<span class="nc" id="L75">    }</span>
+
+    @Override
+    public  String toString() {
+<span class="nc" id="L79">        return &quot;ChemistryInstrument{&quot;</span>
+                + &quot;brand='&quot;
+                + brand
+                + '\''
+                + &quot;, model='&quot;
+                + model
+                + '\''
+                + &quot;, yearOfRelease=&quot;
+                + yearOfRelease
+                + &quot;, typeOfInstruments=&quot;
+                + typeOfInstruments
+                + '}';
+    }
+
+    public  String getHeaders(){
+
+<span class="nc" id="L95">       return &quot;brand&quot; + &quot;,&quot;</span>
+               + &quot;model&quot; + &quot;,&quot;
+               + &quot;yearOfRelease&quot; + &quot;,&quot;
+               + &quot;typeOfInstruments&quot;;
+    }
+
+    public String toCSV(){
+
+<span class="nc" id="L103">       return brand + &quot;,&quot;</span>
+               + model + &quot;,&quot;
+               + yearOfRelease + &quot;,&quot;
+               + typeOfInstruments;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

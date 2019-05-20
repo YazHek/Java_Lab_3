@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pipette.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java_Lab8</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.Java_Lab8.models</a> &gt; <span class="el_source">Pipette.java</span></div><h1>Pipette.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.Java_Lab8.models;
+
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+@Entity
+public class Pipette extends ChemistryInstrument {
+
+    private int volume;
+    @Enumerated(EnumType.STRING)
+    private TypeOfPipette typeOfPipette;
+
+<span class="fc" id="L15">    public Pipette() {</span>
+
+<span class="fc" id="L17">    }</span>
+
+    public Pipette(final String brandObj, final String modelObj,
+                   final int yearOfReleaseObj,
+                   final TypeOfInstruments typeOfInstrumentsObj,
+                   final int volumeObj, final TypeOfPipette typeOfPipetteObj) {
+<span class="fc" id="L23">        super(brandObj, modelObj, yearOfReleaseObj, typeOfInstrumentsObj);</span>
+<span class="fc" id="L24">        this.volume = volumeObj;</span>
+<span class="fc" id="L25">        this.typeOfPipette = typeOfPipetteObj;</span>
+
+<span class="fc" id="L27">    }</span>
+
+    public final int getVolume() {
+<span class="nc" id="L30">        return volume;</span>
+    }
+
+    public final void setVolume(final int volumeObj) {
+<span class="nc" id="L34">        this.volume = volumeObj;</span>
+<span class="nc" id="L35">    }</span>
+
+    public final TypeOfPipette getTypeOfPipette() {
+<span class="nc" id="L38">        return typeOfPipette;</span>
+    }
+
+    public final void setTypeOfPipette(final TypeOfPipette typeOfPipetteObj) {
+<span class="nc" id="L42">        this.typeOfPipette = typeOfPipetteObj;</span>
+<span class="nc" id="L43">    }</span>
+
+    @Override
+    public final String toString() {
+<span class="fc" id="L47">        return &quot;Pipette{&quot;</span>
+                + &quot;volume=&quot;
+                + volume
+                + &quot;, typeOfPipette=&quot;
+                + typeOfPipette
+                + '}';
+    }
+
+    public String getHeaders(){
+
+<span class="nc" id="L57">        return super.getHeaders()</span>
+                + &quot;volume&quot;
+                + &quot;,&quot;
+                + &quot;typeOfPipette&quot;;
+    }
+
+    public String toCSV() {
+<span class="nc" id="L64">        return super.toCSV()</span>
+                + volume
+                + &quot;,&quot;
+                + typeOfPipette;
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

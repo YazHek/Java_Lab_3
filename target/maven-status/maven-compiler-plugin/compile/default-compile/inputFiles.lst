@@ -1,0 +1,14 @@
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/repositories/PipetteRepository.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/JavaLab8Application.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManagerImpl.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/TypeOfPipette.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/TypeOfInstruments.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManagerWriter.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/MeasuringCylinder.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/Pipette.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/Flask.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/Tripod.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/ChemistryInstrument.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/repositories/FlaskRepository.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManager.java
+/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/repositories/TripodRepository.java
