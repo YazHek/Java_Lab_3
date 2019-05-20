@@ -1,8 +1,0 @@
-brand,model,yearOfRelease,typeOfInstrumentsname,height,radius
-FlaskBrand,FlaskModel,2003,ACIDSFlaskName,11,1
-brand,model,yearOfRelease,typeOfInstrumentsheight,volume,3
-CylinderBrand,CylynderModel,2001,BASIS12,2,3
-brand,model,yearOfRelease,typeOfInstrumentsvolume,typeOfPipette
-PipetteBrand,PipetteModel,2000,OXIDS1,ELECTRICAL
-brand,model,yearOfRelease,typeOfInstrumentsheight,diametr,lenght
-TripodBrand,TripodModel,2004,ACIDS4,1,3

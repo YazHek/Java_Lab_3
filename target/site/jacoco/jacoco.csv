@@ -1,10 +1,11 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.managers,ChemistryInstrumentManagerImpl,71,50,0,4,16,20,2,7,2,5
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.managers,ChemistryInstrumentManagerWriter,10,68,0,2,5,17,2,4,2,3
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,Tripod,43,50,0,0,10,9,7,4,7,4
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,MeasuringCylinder,46,50,0,0,12,7,8,3,8,3
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,TypeOfInstruments,0,34,0,0,0,2,0,1,0,1
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,TypeOfPipette,0,24,0,0,0,2,0,1,0,1
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,Pipette,31,42,0,0,7,8,5,4,5,4
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,ChemistryInstrument,45,57,0,0,7,16,5,8,5,8
-Chemistry Instruments,ua.lviv.iot.Chemistry_Instruments.models,Flask,45,50,0,0,10,9,7,4,7,4
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,Flask,52,43,0,0,11,8,8,3,8,3
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,Tripod,52,41,0,0,11,8,8,3,8,3
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,TypeOfPipette,0,24,0,0,0,2,0,1,0,1
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,ChemistryInstrument,88,21,0,0,17,9,12,3,12,3
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,TypeOfInstruments,0,34,0,0,0,2,0,1,0,1
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,Pipette,40,33,0,0,8,7,6,3,6,3
+Java_Lab8,ua.lviv.iot.Java_Lab8.models,MeasuringCylinder,96,0,0,0,19,0,11,0,11,0
+Java_Lab8,ua.lviv.iot.Java_Lab8,JavaLab8Application,5,83,0,0,2,15,1,10,1,10
+Java_Lab8,ua.lviv.iot.Java_Lab8.managers,ChemistryInstrumentManagerImpl,54,0,4,0,22,0,8,0,6,0
+Java_Lab8,ua.lviv.iot.Java_Lab8.managers,ChemistryInstrumentManagerWriter,78,0,2,0,22,0,6,0,5,0
