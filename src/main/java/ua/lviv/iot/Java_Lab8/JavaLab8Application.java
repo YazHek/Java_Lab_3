@@ -12,7 +12,7 @@ import ua.lviv.iot.Java_Lab8.repositories.TripodRepository;
 @SpringBootApplication
 public class JavaLab8Application {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         SpringApplication.run(JavaLab8Application.class, args);
     }
 

@@ -5,6 +5,9 @@ ua/lviv/iot/Java_Lab8/models/TypeOfPipette.class
 ua/lviv/iot/Java_Lab8/JavaLab8Application.class
 ua/lviv/iot/Java_Lab8/models/ChemistryInstrument.class
 ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManagerWriter.class
+ua/lviv/iot/Java_Lab8/services/PipetteService.class
+ua/lviv/iot/Java_Lab8/services/TripodService.class
+ua/lviv/iot/Java_Lab8/services/FlaskService.class
 ua/lviv/iot/Java_Lab8/repositories/TripodRepository.class
 ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManagerImpl.class
 ua/lviv/iot/Java_Lab8/models/Tripod.class
