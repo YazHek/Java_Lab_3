@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.8.0" timestamp="2019-05-21T11:16:24.088">
+<file name="/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/managers/ChemistryInstrumentManagerImpl.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="65" rule="ImportFromSamePackage" ruleset="Error Prone" package="ua.lviv.iot.Java_Lab8.managers" class="ChemistryInstrumentManagerImpl" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_errorprone.html#importfromsamepackage" priority="3">
+No need to import a type that lives in the same package
+</violation>
+<violation beginline="18" endline="18" begincolumn="13" endcolumn="35" rule="UnusedPrivateField" ruleset="Best Practices" package="ua.lviv.iot.Java_Lab8.managers" class="ChemistryInstrumentManagerImpl" variable="chemistryInstrumentList" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'chemistryInstrumentList'.
+</violation>
+</file>
+<file name="/Users/admin1/IdeaProjects/Java_Lab8/src/main/java/ua/lviv/iot/Java_Lab8/models/Pipette.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="34" rule="UnusedImports" ruleset="Best Practices" package="ua.lviv.iot.Java_Lab8.models" class="Pipette" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'javax.persistence.Embedded'
+</violation>
+</file>
+</pmd>
